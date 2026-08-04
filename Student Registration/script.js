@@ -8,44 +8,43 @@ const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const ageError = document.getElementById("ageError");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function(event){
 
     event.preventDefault();
 
-    // Clear previous errors
     nameError.textContent = "";
     emailError.textContent = "";
     ageError.textContent = "";
 
     let isValid = true;
 
-    // Validate Name
-    if (name.value.trim() === "") {
+    // Name Validation
+    if(name.value.trim() === ""){
         nameError.textContent = "Name is required";
         isValid = false;
     }
 
-    // Validate Email
-    if (email.value.trim() === "") {
+    // Email Validation
+    if(email.value.trim() === ""){
         emailError.textContent = "Email is required";
         isValid = false;
     }
-    else if (!email.value.includes("@")) {
+    else if(!email.value.includes("@")){
         emailError.textContent = "Enter a valid email";
         isValid = false;
     }
 
-    // Validate Age
-    if (age.value.trim() === "") {
+    // Age Validation
+    if(age.value.trim() === ""){
         ageError.textContent = "Age is required";
         isValid = false;
     }
-    else if (age.value <= 0) {
+    else if(age.value <= 0){
         ageError.textContent = "Enter a valid age";
         isValid = false;
     }
 
-    if (isValid) {
+    if(isValid){
         alert("Form Submitted Successfully!");
         form.reset();
     }

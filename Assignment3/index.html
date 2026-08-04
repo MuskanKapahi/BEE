@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Feedback Form</h1>
+
+    <form id="feedbackForm">
+
+        <label>Name</label>
+        <input type="text" id="name">
+
+        <label>Email</label>
+        <input type="email" id="email">
+
+        <label>Course</label>
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option>CSE</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>MCA</option>
+            <option>MBA</option>
+        </select>
+
+        <label>Feedback</label>
+
+        <textarea id="feedback" rows="3"></textarea>
+
+        <div class="buttons">
+            <button type="submit">Submit Feedback</button>
+
+            <button type="button" onclick="deleteData()">
+                Delete Stored Data
+            </button>
+        </div>
+
+    </form>
+
+    <h2>Stored Feedback</h2>
+
+    <div id="output"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

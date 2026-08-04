@@ -2,38 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 50px 15px;
+        }
+
+        h2{
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+
+        label{
+            font-size: 18px;
+        }
+
+        input{
+            width: 400px;
+            height: 35px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .error{
+            color: red;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button{
+            width: 95px;
+            height: 42px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <h2>Student Registration Form</h2>
+<h2>Student Registration Form</h2>
 
-    <form id="form">
+<form id="form">
 
-        <label>Name</label><br>
-        <input type="text" id="name">
-        <div id="nameError" style="color:red;"></div>
+    <label>Name</label><br>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div>
 
-        <br>
+    <label>Email</label><br>
+    <input type="text" id="email">
+    <div id="emailError" class="error"></div>
 
-        <label>Email</label><br>
-        <input type="text" id="email">
-        <div id="emailError" style="color:red;"></div>
+    <label>Age</label><br>
+    <input type="number" id="age">
+    <div id="ageError" class="error"></div>
 
-        <br>
+    <button type="submit">Submit</button>
 
-        <label>Age</label><br>
-        <input type="number" id="age">
-        <div id="ageError" style="color:red;"></div>
+</form>
 
-        <br><br>
-
-        <button type="submit">Submit</button>
-
-    </form>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
